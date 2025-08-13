@@ -1,39 +1,98 @@
 {% load static %}
-<footer class="bg-dark text-light mt-5">
-  <div class="container py-4">
-    <div class="row">
-      <!-- Logo y descripción -->
-      <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">Vital Recorder</h5>
-        <p class="text-secondary">
-          Monitorea tu salud de manera sencilla y precisa.  
-          Tecnología diseñada para mejorar tu bienestar diario.
+
+<!-- Separador ondulado -->
+<div class="footer-wave text-dark">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#212529" d="M0,64 C240,96 480,0 720,32 C960,64 1200,64 1440,32 L1440,90 L0,90 Z"></path>
+  </svg>
+</div>
+
+<footer class="footer bg-dark text-light pt-4 pb-3">
+  <div class="container">
+
+    <!-- Top row -->
+    <div class="row g-4 align-items-start">
+      <!-- Brand / descripción -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <img src="{% static 'vital_recorder.png' %}" alt="Vital Recorder"
+               class="rounded-circle border" style="width:36px;height:36px;object-fit:cover">
+          <h5 class="m-0 fw-bold">Vital Recorder</h5>
+        </div>
+        <p class="text-secondary mb-3">
+          Recordatorios simples, bienestar real. Tecnología pensada para tu día a día.
         </p>
+
+        <!-- Redes -->
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-light btn-sm rounded-circle" href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="btn btn-outline-light btn-sm rounded-circle" href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a class="btn btn-outline-light btn-sm rounded-circle" href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a class="btn btn-outline-light btn-sm rounded-circle" href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+
       </div>
 
-      <!-- Enlaces rápidos -->
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Enlaces rápidos</h6>
+      <!-- Enlaces -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase small fw-bold mb-3">Sitio</h6>
         <ul class="list-unstyled">
-          <li><a href="{% url 'home' %}" class="text-decoration-none text-light">Inicio</a></li>
-          <li><a href="{% url 'producto' %}" class="text-decoration-none text-light">Producto</a></li>
-          <li><a href="{% url 'sobre' %}" class="text-decoration-none text-light">Sobre nosotros</a></li>
-          <li><a href="{% url 'contacto' %}" class="text-decoration-none text-light">Contáctanos</a></li>
+          <li><a class="footer-link" href="{% url 'home' %}">Inicio</a></li>
+          <li><a class="footer-link" href="{% url 'sobre' %}">Sobre nosotros</a></li>
+          <li><a class="footer-link" href="{% url 'producto' %}">Producto</a></li>
+          <li><a class="footer-link" href="{% url 'contacto' %}">Contáctanos</a></li>
         </ul>
       </div>
 
-      <!-- Contacto -->
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Contáctanos</h6>
-        <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> La Paz, Bolivia</p>
-        <p class="mb-1"><i class="bi bi-envelope-fill"></i> contacto@vitalrecorder.com</p>
-        <p><i class="bi bi-telephone-fill"></i> +591 777 000 00</p>
+      <!-- Soporte -->
+      <div class="col-6 col-md-3">
+        <h6 class="text-uppercase small fw-bold mb-3">Soporte</h6>
+        <ul class="list-unstyled">
+          <li><span class="footer-text"><i class="bi bi-envelope me-1"></i> contacto@vitalrecorder.com</span></li>
+          <li><span class="footer-text"><i class="bi bi-telephone me-1"></i> +591 777 000 00</span></li>
+          <li><span class="footer-text"><i class="bi bi-geo-alt me-1"></i> La Paz, Bolivia</span></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter / badges -->
+      <div class="col-md-3">
+        <h6 class="text-uppercase small fw-bold mb-3">Descargar en:</h6>
+        <div class="d-flex gap-2 align-items-center">
+          <img src="{% static 'download_play.svg' %}" alt="Google Play" height="28">
+          <img src="{% static 'download_ios.png' %}" alt="App Store" height="28">
+        </div>
       </div>
     </div>
 
-    <!-- Derechos -->
-    <div class="text-center border-top border-secondary pt-3">
-      <small class="text-secondary">&copy; 2025 Vital Recorder. Todos los derechos reservados.</small>
+    <!-- Bottom row -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top border-secondary-subtle">
+      <small class="text-secondary order-2 order-md-1 mt-2 mt-md-0">
+        © <span id="year"></span> Vital Recorder. Todos los derechos reservados.
+      </small>
+      <button id="backToTop" class="btn btn-outline-light btn-sm rounded-pill order-1 order-md-2">
+        <i class="bi bi-arrow-up"></i> Arriba
+      </button>
     </div>
   </div>
 </footer>
+
+<script>
+  // Año automático y scroll suave al tope
+  (function () {
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    const topBtn = document.getElementById('backToTop');
+    if (topBtn) {
+      topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+  })();
+</script>

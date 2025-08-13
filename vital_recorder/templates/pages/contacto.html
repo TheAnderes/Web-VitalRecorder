@@ -4,59 +4,63 @@
 {% block title %}Contáctanos | Vital Recorder{% endblock %}
 
 {% block content %}
-<section class="py-5">
-  <h2 class="fw-bold mb-3 text-center">Contáctanos</h2>
-  <p class="text-center text-secondary mb-5">
-    Si tienes preguntas o deseas más información sobre <strong>Vital Recorder</strong>,
-    ponte en contacto con nosotros. Estamos aquí para ayudarte.
-  </p>
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-3">Contáctanos</h2>
+    <p class="text-center text-muted mb-5">
+      Estamos aquí para ayudarte. Envíanos un mensaje o usa cualquiera de nuestros medios de contacto.
+    </p>
+    <div class="row g-4">
+      <!-- Formulario -->
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" id="name" class="form-control" placeholder="Tu nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" class="form-control" placeholder="tuemail@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea id="message" rows="4" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
 
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <form action="{% url 'contacto' %}" method="post"
-            class="p-4 border rounded-4 shadow-sm bg-light">
-        {% csrf_token %}
-        <div class="mb-3">
-          <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
-          <input type="text" class="form-control" id="nombre" name="nombre"
-                 placeholder="Tu nombre" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label fw-semibold">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" name="email"
-                 placeholder="tu@correo.com" required>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
-                    placeholder="Escribe tu mensaje..." required></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary px-4">
-            <i class="bi bi-send"></i> Enviar mensaje
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+      <!-- Información de contacto -->
+       
+      <div class="col-md-6">
+        <h5 class="fw-bold mb-3">
+          También puedes contactarnos por:
+        </h5>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3">
+            <i class="bi bi-envelope-fill text-primary me-2"></i>
+            <strong>Correo electrónico:</strong> contacto@vitalrecorder.com
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-telephone-fill text-primary me-2"></i>
+            <strong>Teléfono:</strong> +591 777 000 00
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+            <strong>Dirección:</strong> La Paz, Bolivia
+          </li>
+        </ul>
 
-  <!-- Información de contacto -->
-  <div class="row mt-5 text-center g-4">
-    <div class="col-md-4">
-      <i class="bi bi-geo-alt-fill fs-3 text-primary"></i>
-      <p class="mb-0 fw-semibold">Dirección</p>
-      <p class="text-secondary">La Paz, Bolivia</p>
-    </div>
-    <div class="col-md-4">
-      <i class="bi bi-envelope-fill fs-3 text-primary"></i>
-      <p class="mb-0 fw-semibold">Correo</p>
-      <p class="text-secondary">contacto@vitalrecorder.com</p>
-    </div>
-    <div class="col-md-4">
-      <i class="bi bi-telephone-fill fs-3 text-primary"></i>
-      <p class="mb-0 fw-semibold">Teléfono</p>
-      <p class="text-secondary">+591 777 000 00</p>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-primary btn-sm rounded-circle" href="https://facebook.com" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="btn btn-outline-primary btn-sm rounded-circle" href="https://instagram.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="btn btn-outline-primary btn-sm rounded-circle" href="https://twitter.com" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a class="btn btn-outline-primary btn-sm rounded-circle" href="https://linkedin.com" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
 {% endblock %}

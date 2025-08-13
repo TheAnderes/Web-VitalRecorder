@@ -18,3 +18,49 @@
 
 .metric-icon { font-size: 2.25rem; }  /* ajústalo a tu gusto */
 
+.footer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer .footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer .footer-link:hover {
+  color: #fff;
+}
+.footer .footer-text {
+  color: #adb5bd;
+}
+
+#backToTop {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+#backToTop:hover {
+  background-color: #0b5ed7;
+}
+
+
+.contact-section h2 {
+  font-size: 2rem;
+}
+
+.contact-section .btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section .btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.contact-section i {
+  font-size: 1.2rem;
+}
