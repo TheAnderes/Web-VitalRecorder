@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contáctanos | Vital Recorder{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <h2 class="fw-bold mb-3 text-center">Contáctanos</h2>
+  <p class="text-center text-secondary mb-5">
+    Si tienes preguntas o deseas más información sobre <strong>Vital Recorder</strong>,
+    ponte en contacto con nosotros. Estamos aquí para ayudarte.
+  </p>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <form action="{% url 'contacto' %}" method="post"
+            class="p-4 border rounded-4 shadow-sm bg-light">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" name="nombre"
+                 placeholder="Tu nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" name="email"
+                 placeholder="tu@correo.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                    placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-4">
+            <i class="bi bi-send"></i> Enviar mensaje
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Información de contacto -->
+  <div class="row mt-5 text-center g-4">
+    <div class="col-md-4">
+      <i class="bi bi-geo-alt-fill fs-3 text-primary"></i>
+      <p class="mb-0 fw-semibold">Dirección</p>
+      <p class="text-secondary">La Paz, Bolivia</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-envelope-fill fs-3 text-primary"></i>
+      <p class="mb-0 fw-semibold">Correo</p>
+      <p class="text-secondary">contacto@vitalrecorder.com</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-telephone-fill fs-3 text-primary"></i>
+      <p class="mb-0 fw-semibold">Teléfono</p>
+      <p class="text-secondary">+591 777 000 00</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

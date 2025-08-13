@@ -1,0 +1,39 @@
+{% load static %}
+<footer class="bg-dark text-light mt-5">
+  <div class="container py-4">
+    <div class="row">
+      <!-- Logo y descripción -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Vital Recorder</h5>
+        <p class="text-secondary">
+          Monitorea tu salud de manera sencilla y precisa.  
+          Tecnología diseñada para mejorar tu bienestar diario.
+        </p>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Enlaces rápidos</h6>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'home' %}" class="text-decoration-none text-light">Inicio</a></li>
+          <li><a href="{% url 'producto' %}" class="text-decoration-none text-light">Producto</a></li>
+          <li><a href="{% url 'sobre' %}" class="text-decoration-none text-light">Sobre nosotros</a></li>
+          <li><a href="{% url 'contacto' %}" class="text-decoration-none text-light">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Contáctanos</h6>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> La Paz, Bolivia</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill"></i> contacto@vitalrecorder.com</p>
+        <p><i class="bi bi-telephone-fill"></i> +591 777 000 00</p>
+      </div>
+    </div>
+
+    <!-- Derechos -->
+    <div class="text-center border-top border-secondary pt-3">
+      <small class="text-secondary">&copy; 2025 Vital Recorder. Todos los derechos reservados.</small>
+    </div>
+  </div>
+</footer>
