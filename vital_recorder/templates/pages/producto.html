@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Producto | Vital Recorder{% endblock %}
+
+{% block content %}
+
+<!-- HERO / ¿QUÉ ES? -->
+<section class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-6">
+      <h1 class="display-6 fw-bold mb-3">¿Qué es Vital Recorder?</h1>
+      <p class="text-secondary fs-5">
+        Vital Recorder es una solución compuesta por una <strong>pulsera inteligente</strong> y una
+        <strong>app móvil</strong> diseñada para ayudar a las personas (especialmente adultos mayores)
+        a <strong>recordar medicamentos y tareas de salud</strong>, y mantener informada a la familia o cuidadores.
+      </p>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex align-items-start gap-2 mb-2">
+          <i class="bi bi-bell text-primary fs-5"></i>
+          <span><strong>Recordatorios confiables:</strong> vibración, luz y notificaciones en el momento justo.</span>
+        </li>
+        <li class="d-flex align-items-start gap-2 mb-2">
+          <i class="bi bi-people text-primary fs-5"></i>
+          <span><strong>Conexión con la familia:</strong> envía avisos cuando una toma fue confirmada o si se olvidó.</span>
+        </li>
+        <li class="d-flex align-items-start gap-2 mb-2">
+          <i class="bi bi-shield-check text-primary fs-5"></i>
+          <span><strong>Diseño cómodo y seguro:</strong> pulsera ligera, materiales suaves y resistentes al uso diario.</span>
+        </li>
+      </ul>
+
+      <div class="d-flex gap-2 mt-3">
+        <a href="{% url 'contacto' %}" class="btn btn-primary px-4">Solicitar información</a>
+        <a href="{% url 'sobre' %}" class="btn btn-outline-secondary px-4">Conocer más</a>
+      </div>
+    </div>
+
+    <div class="col-lg-6 text-center">
+      <!-- Pon tu imagen del producto -->
+      <img src="{% static 'vital_recorder.png' %}" alt="Pulsera Vital Recorder"
+           class="img-fluid rounded-4 shadow-sm border" style="max-width:520px">
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">¿Cómo funciona?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <i class="bi bi-phone fs-1 text-primary d-block mb-2"></i>
+            <h5 class="fw-semibold">1) Configura en la app</h5>
+            <p class="text-secondary mb-0">Registra medicamentos, dosis y horarios. Define quién recibirá avisos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <i class="bi bi-smartwatch fs-1 text-primary d-block mb-2"></i>
+            <h5 class="fw-semibold">2) La pulsera te avisa</h5>
+            <p class="text-secondary mb-0">Vibración y luz en la muñeca. También notificaciones en el teléfono.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <i class="bi bi-check2-circle fs-1 text-primary d-block mb-2"></i>
+            <h5 class="fw-semibold">3) Confirmas y registras</h5>
+            <p class="text-secondary mb-0">Marca la toma como realizada y comparte el estado con la familia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARACTERÍSTICAS PRINCIPALES -->
+<section class="container py-5">
+  <h2 class="fw-bold mb-4">Características principales</h2>
+  <div class="row g-3">
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-bell-fill text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Recordatorios inteligentes</h6>
+          <p class="text-secondary mb-0">Alertas por vibración/luz en la pulsera y notificaciones en el móvil.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-calendar2-check text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Agenda flexible</h6>
+          <p class="text-secondary mb-0">Soporta múltiples medicamentos, dosis y periodicidades.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-people-fill text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Familia/cuidadores</h6>
+          <p class="text-secondary mb-0">Envío de avisos de cumplimiento u olvido a contactos de confianza.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-activity text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Historial y reportes</h6>
+          <p class="text-secondary mb-0">Registro de tomas, estadísticas y exportación de informes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-shield-lock-fill text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Privacidad</h6>
+          <p class="text-secondary mb-0">Datos protegidos y control de acceso por roles.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <i class="bi bi-battery-charging text-primary fs-4"></i>
+          <h6 class="fw-semibold mt-2">Batería optimizada</h6>
+          <p class="text-secondary mb-0">Autonomía para el uso diario con carga rápida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIFICACIONES TÉCNICAS (ejemplo) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Especificaciones técnicas</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-lg align-middle" style="font-size: 1.1rem;">
+        <tbody>
+          <tr>
+            <th style="width: 25%;">Conectividad</th>
+            <td>Bluetooth Low Energy (BLE)</td>
+          </tr>
+          <tr>
+            <th>Sensores</th>
+            <td>Vibración, led de estado; (opcionales) movimiento/frecuencia cardíaca*</td>
+          </tr>
+          <tr>
+            <th>Resistencia</th>
+            <td>Diseño para uso diario; salpicaduras leves</td>
+          </tr>
+          <tr>
+            <th>Batería</th>
+            <td>Autonomía diaria; carga rápida por base magnética</td>
+          </tr>
+          <tr>
+            <th>Compatibilidad</th>
+            <td>Android / iOS (app móvil)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .table-lg th,
+  .table-lg td {
+    padding: 1.2rem 1rem; /* celdas más grandes */
+  }
+</style>
+
+<!-- FAQ -->
+<section class="container py-5">
+  <h2 class="fw-bold mb-4">Preguntas frecuentes</h2>
+  <div class="accordion" id="faq">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true">¿Necesito internet para usar la pulsera?</button>
+      </h2>
+      <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+        <div class="accordion-body">
+          La pulsera se sincroniza con la app vía Bluetooth. Internet solo es necesario para copias de seguridad y notificaciones remotas a la familia.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">¿Qué pasa si me olvido de confirmar?</button>
+      </h2>
+      <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Puedes re-confirmar después desde la app. Si habilitas avisos a la familia, se enviará una notificación de olvido.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">¿La pulsera es resistente al agua?</button>
+      </h2>
+      <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">
+          Resiste salpicaduras leves (lavado de manos). No está diseñada para natación o inmersión prolongada.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-5 bg-primary-subtle">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-2">¿Listo para probar Vital Recorder?</h3>
+    <p class="text-secondary mb-3">Escríbenos y te ayudamos a configurar tu primer plan de recordatorios.</p>
+    <a href="{% url 'contacto' %}" class="btn btn-primary btn-lg px-4">Contáctanos</a>
+  </div>
+</section>
+
+{% endblock %}

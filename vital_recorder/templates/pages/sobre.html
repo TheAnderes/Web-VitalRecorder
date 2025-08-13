@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sobre nosotros | Vital Recorder{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-6">
+      <h1 class="display-6 fw-bold mb-3">Nuestra misión</h1>
+      <p class="text-secondary fs-5 mb-3">
+        En <strong>Vital Recorder</strong> creemos que la tecnología debe ser simple y humana.
+        Creamos herramientas que ayudan a tomar medicamentos a tiempo, dan tranquilidad a las familias
+        y mejoran el cuidado diario de las personas mayores.
+      </p>
+      <div class="d-flex gap-2">
+        <a href="{% url 'producto' %}" class="btn btn-primary px-4">Conoce el producto</a>
+        <a href="{% url 'contacto' %}" class="btn btn-outline-secondary px-4">Contáctanos</a>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center">
+      <img src="{% static 'images/about/team-hero.jpg' %}" class="img-fluid rounded-4 shadow-sm border"
+           alt="Equipo de Vital Recorder" style="max-width:520px">
+    </div>
+  </div>
+</section>
+
+<!-- VISIÓN Y PROPÓSITO -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-eye fs-2 text-primary"></i>
+            <h3 class="fw-semibold mt-2">Visión</h3>
+            <p class="text-secondary mb-0">
+              Ser la plataforma más confiable para el apoyo cotidiano en salud en América Latina,
+              acercando a familias, cuidadores y profesionales con datos claros y oportunos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-bullseye fs-2 text-primary"></i>
+            <h3 class="fw-semibold mt-2">Propósito</h3>
+            <p class="text-secondary mb-0">
+              Reducir olvidos de medicación y mejorar la adherencia terapéutica
+              mediante recordatorios sencillos y una experiencia accesible para todos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUESTROS VALORES -->
+<section class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">Nuestros valores</h2>
+  <div class="row g-3">
+    <div class="col-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center p-3">
+        <i class="bi bi-heart fs-1 text-primary"></i>
+        <h6 class="fw-semibold mt-2 mb-1">Empatía</h6>
+        <p class="text-secondary small mb-0">Diseñamos pensando en personas mayores y sus familias.</p>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center p-3">
+        <i class="bi bi-shield-check fs-1 text-primary"></i>
+        <h6 class="fw-semibold mt-2 mb-1">Confianza</h6>
+        <p class="text-secondary small mb-0">Privacidad y seguridad en cada interacción.</p>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center p-3">
+        <i class="bi bi-ui-checks-grid fs-1 text-primary"></i>
+        <h6 class="fw-semibold mt-2 mb-1">Simplicidad</h6>
+        <p class="text-secondary small mb-0">Interfaz clara y accesible, sin complicaciones.</p>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center p-3">
+        <i class="bi bi-people fs-1 text-primary"></i>
+        <h6 class="fw-semibold mt-2 mb-1">Acompañamiento</h6>
+        <p class="text-secondary small mb-0">Conectamos usuarios, cuidadores y médicos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+
+<section class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">Conoce al equipo</h2>
+
+
+  <!-- Fila de 3 miembros -->
+  <div class="row g-4 justify-content-center">
+    <div class="col-6 col-md-4">
+      <div class="card border-0 shadow-sm text-center h-100">
+        <div class="p-3">
+          <img src="{% static 'images/about/member-1.jpg' %}" class="rounded-circle border shadow-sm"
+               alt="Andres Marca" style="width:112px;height:112px;object-fit:cover;">
+        </div>
+        <div class="card-body pt-0">
+          <h6 class="fw-semibold mb-1">Andres Marca</h6>
+          <p class="text-secondary small mb-2">Producto & UX</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+      <div class="card border-0 shadow-sm text-center h-100">
+        <div class="p-3">
+          <img src="{% static 'images/about/member-2.jpg' %}" class="rounded-circle border shadow-sm"
+               alt="Carla Arancibia" style="width:112px;height:112px;object-fit:cover;">
+        </div>
+        <div class="card-body pt-0">
+          <h6 class="fw-semibold mb-1">Carla Arancibia</h6>
+          <p class="text-secondary small mb-2">HW & Firmware</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+      <div class="card border-0 shadow-sm text-center h-100">
+        <div class="p-3">
+          <img src="{% static 'images/about/member-3.jpg' %}" class="rounded-circle border shadow-sm"
+               alt="Denis Ramos" style="width:112px;height:112px;object-fit:cover;">
+        </div>
+        <div class="card-body pt-0">
+          <h6 class="fw-semibold mb-1">Denis Ramos</h6>
+          <p class="text-secondary small mb-2">Backend & Data</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila de 2 miembros -->
+  <div class="row g-4 justify-content-center mt-3">
+    <div class="col-6 col-md-4">
+      <div class="card border-0 shadow-sm text-center h-100">
+        <div class="p-3">
+          <img src="{% static 'images/about/member-4.jpg' %}" class="rounded-circle border shadow-sm"
+               alt="Fernando Choque" style="width:112px;height:112px;object-fit:cover;">
+        </div>
+        <div class="card-body pt-0">
+          <h6 class="fw-semibold mb-1">Fernando Choque</h6>
+          <p class="text-secondary small mb-2">Backend & Data</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+      <div class="card border-0 shadow-sm text-center h-100">
+        <div class="p-3">
+          <img src="{% static 'images/about/member-5.jpg' %}" class="rounded-circle border shadow-sm"
+               alt="Daniel Guevara" style="width:112px;height:112px;object-fit:cover;">
+        </div>
+        <div class="card-body pt-0">
+          <h6 class="fw-semibold mb-1">Daniel Guevara</h6>
+          <p class="text-secondary small mb-2">Full Stack</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTRICAS/CONFIANZA -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-3">
+        <h3 class="fw-bold mb-0">+95%</h3>
+        <p class="text-secondary mb-0 small">satisfacción de cuidadores</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h3 class="fw-bold mb-0">+10k</h3>
+        <p class="text-secondary mb-0 small">recordatorios enviados</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h3 class="fw-bold mb-0">24/7</h3>
+        <p class="text-secondary mb-0 small">soporte por correo</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h3 class="fw-bold mb-0">3</h3>
+        <p class="text-secondary mb-0 small">versiones de prototipo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

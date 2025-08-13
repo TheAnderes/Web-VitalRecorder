@@ -1,0 +1,79 @@
+{# templates/home/index.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Inicio | Vital Recorder{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-7">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Nunca olvides tus medicamentos</h1>
+      <p class="text-secondary fs-5">
+        Recibe recordatorios y realiza un seguimiento de tus tareas importantes de forma sencilla.
+      </p>
+      <div class="d-flex gap-2 flex-wrap mb-4">
+        <a href="{% url 'producto' %}" class="btn btn-primary btn-lg px-4">Conoce el producto</a>
+        <a href="{% url 'contacto' %}" class="btn btn-outline-secondary btn-lg px-4">Contáctanos</a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <i class="bi bi-bell card-icon text-primary"></i>
+              <div>
+                <h5 class="card-title fw-semibold mb-1">Recordatorios inteligentes</h5>
+                <p class="card-text text-secondary mb-0">Alertas de dosis oportunas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <i class="bi bi-people card-icon text-primary"></i>
+              <div>
+                <h5 class="card-title fw-semibold mb-1">Sincronización familiar</h5>
+                <p class="card-text text-secondary mb-0">Comparte avisos y estado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <i class="bi bi-sliders2 card-icon text-primary"></i>
+              <div>
+                <h5 class="card-title fw-semibold mb-1">Fácil de configurar</h5>
+                <p class="card-text text-secondary mb-0">App intuitiva y amigable.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <i class="bi bi-shield-check card-icon text-primary"></i>
+              <div>
+                <h5 class="card-title fw-semibold mb-1">Cómodo y seguro</h5>
+                <p class="card-text text-secondary mb-0">Pulsera ligera y resistente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5 text-center">
+      <!-- Imagen de la muñeca reducida -->
+      <img src="{% static 'vital_recorder_arm.png' %}" alt="Pulsera Vital Recorder en muñeca"
+           class="img-fluid rounded-4 shadow-sm border hero-img mx-auto d-block">
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+/* vital_recorder/css/custom.css */
+:root {
+  --brand: #2563eb;
+}
+.btn-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+.navbar .nav-link.active { font-weight: 700; }
+
+.brand-logo{ height:36px; width:36px; object-fit:cover; }
+.hero-img{ max-width:420px; }            /* controla tamaño de la imagen principal */
+.card-icon{ font-size:1.6rem; } 
